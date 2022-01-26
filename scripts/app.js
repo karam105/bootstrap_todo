@@ -83,21 +83,21 @@ function fetchAllToDos(index, shard_id, todo, status, dueDate) {
 
         var complete = document.createElement('td');
         var checkMark = document.createElement('img');
-        checkMark.src = '../images/no-check-square.png';
+        checkMark.src = '/images/no-check-square.png';
         checkMark.addEventListener('click', handleDeleteOrCheckOrEdit);
         checkMark.alt = 'checkButton';
         checkMark.style.cursor = 'pointer';
         checkMark.title = 'Check Complete';
 
         var deleteItem = document.createElement('img');
-        deleteItem.src = '../images/delete.png';
+        deleteItem.src = '/images/delete.png';
         deleteItem.addEventListener('click', handleDeleteOrCheckOrEdit);
         deleteItem.alt = 'deleteButton';
         deleteItem.style.cursor = 'pointer';
         deleteItem.title = 'Delete Item';
 
         var editItem = document.createElement('img');
-        editItem.src = '../images/edit.png';
+        editItem.src = '/images/edit.png';
         editItem.addEventListener('click', handleDeleteOrCheckOrEdit);
         editItem.alt = 'editButton';
         editItem.style.cursor = 'pointer';
@@ -134,21 +134,21 @@ function fetchAllToDos(index, shard_id, todo, status, dueDate) {
 
         var complete = document.createElement('td');
         var checkMark = document.createElement('img');
-        checkMark.src = '../images/check-square.png';
+        checkMark.src = '/images/check-square.png';
         checkMark.addEventListener('click', handleDeleteOrCheckOrEdit);
         checkMark.alt = 'checkButton';
         checkMark.style.cursor = 'pointer';
         checkMark.title = 'Check Complete';
 
         var deleteItem = document.createElement('img');
-        deleteItem.src = '../images/delete.png';
+        deleteItem.src = '/images/delete.png';
         deleteItem.addEventListener('click', handleDeleteOrCheckOrEdit);
         deleteItem.alt = 'deleteButton';
         deleteItem.style.cursor = 'pointer';
         deleteItem.title = 'Delete Item';
 
         var editItem = document.createElement('img');
-        editItem.src = '../images/edit.png';
+        editItem.src = '/images/edit.png';
         editItem.addEventListener('click', handleDeleteOrCheckOrEdit);
         editItem.alt = 'editButton';
         editItem.style.cursor = 'pointer';
