@@ -1,0 +1,93 @@
+html {
+    height: 100vh;
+    min-width: 600px;
+    background-image: linear-gradient(130deg, #FFFFFF, #1C3F80);
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+body {
+    width: 850px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 50px auto;
+}
+
+.appBody {
+    background-color: transparent;
+}
+
+.container {
+    width: 850px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 50px auto;
+    font-family: 'Raleway', sans-serif;
+}
+
+.logo {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+form table {
+    margin: 0px 10px 20px 10px;
+}
+
+.register {
+    font-size: larger;
+    width: 500px;
+    margin: 10px 175px 20px 175px;
+}
+
+.main {
+    padding: 20px;
+}
+
+th {
+    text-align: center;
+}
+
+td {
+    background-color: white;
+}
+
+.mySortable {
+    cursor: pointer;
+}
+
+p {
+    text-align: center;
+    font-size: x-large;
+}
+
+#text-position {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    border: black 5px double;
+}
+
+h4, h5{
+    padding: 0px 10px;
+}
+
+#signOut {
+    position: relative;
+    left: 325px;
+    bottom: 85px;
+    font-size: larger;
+}
+
+#backPage {
+    position: relative;
+    right: 345px;
+    bottom: 40px;
+    font-size: larger;
+}

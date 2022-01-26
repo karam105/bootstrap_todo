@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Registration</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Scripts -->
+    <script src="scripts/amazon-cognito-identity.min.js"></script>
+    <script src="scripts/register.js"></script>
+    <script src="scripts/config.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/eaeb8cf880.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body class="container">
+      <div class="logo">
+          <h1 class="headline">Create a new account</h1>
+      </div>
+      
+      <form onsubmit="registerButton()">
+        <div class="form-group">
+            <label for="nameRegister">Name</label>
+            <span><i class="fas fa-user"></i></span>
+            <input type="text" class="form-control" name="nameRegister" id="nameRegister" placeholder="Enter name">
+        </div>
+
+        <div class="form-group">
+            <label for="emailRegister">Email Address</label>
+            <span><i class="fas fa-envelope"></i></span>
+            <input type="email" class="form-control" name="emailRegister" id="emailRegister" aria-describedby="emailHelpId" placeholder="Enter email">
+        </div>
+
+        <div class="form-group">
+            <label for="passwordRegister">Password</label>
+            <span><i class="fas fa-lock"></i></span>
+            <input type="password" class="form-control" name="passwordRegister" id="passwordRegister" placeholder="Password">
+        </div>
+
+        <div class="form-group">
+            <label for="confirmPasswordRegister">Confirm Password</label>
+             <span><i class="fas fa-lock"></i></span>
+            <input type="password" class="form-control" name="confirmPasswordRegister" id="confirmPasswordRegister" placeholder="Password">
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Register</button>
+      </form>
+
+      <h3 id="checkEmail"></h3>
+
+      <a class="register badge badge-primary" href="./index.html">Login</a>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
