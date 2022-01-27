@@ -83,21 +83,21 @@ function fetchAllToDos(index, shard_id, todo, status, dueDate) {
 
         var complete = document.createElement('td');
         var checkMark = document.createElement('img');
-        checkMark.src = '/images/no-check-square.png';
+        checkMark.src = '/images/no-check-square.PNG';
         checkMark.addEventListener('click', handleDeleteOrCheckOrEdit);
         checkMark.alt = 'checkButton';
         checkMark.style.cursor = 'pointer';
         checkMark.title = 'Check Complete';
 
         var deleteItem = document.createElement('img');
-        deleteItem.src = '/images/delete.png';
+        deleteItem.src = '/images/delete.PNG';
         deleteItem.addEventListener('click', handleDeleteOrCheckOrEdit);
         deleteItem.alt = 'deleteButton';
         deleteItem.style.cursor = 'pointer';
         deleteItem.title = 'Delete Item';
 
         var editItem = document.createElement('img');
-        editItem.src = '/images/edit.png';
+        editItem.src = '/images/edit.PNG';
         editItem.addEventListener('click', handleDeleteOrCheckOrEdit);
         editItem.alt = 'editButton';
         editItem.style.cursor = 'pointer';
@@ -134,21 +134,21 @@ function fetchAllToDos(index, shard_id, todo, status, dueDate) {
 
         var complete = document.createElement('td');
         var checkMark = document.createElement('img');
-        checkMark.src = '/images/check-square.png';
+        checkMark.src = '/images/check-square.PNG';
         checkMark.addEventListener('click', handleDeleteOrCheckOrEdit);
         checkMark.alt = 'checkButton';
         checkMark.style.cursor = 'pointer';
         checkMark.title = 'Check Complete';
 
         var deleteItem = document.createElement('img');
-        deleteItem.src = '/images/delete.png';
+        deleteItem.src = '/images/delete.PNG';
         deleteItem.addEventListener('click', handleDeleteOrCheckOrEdit);
         deleteItem.alt = 'deleteButton';
         deleteItem.style.cursor = 'pointer';
         deleteItem.title = 'Delete Item';
 
         var editItem = document.createElement('img');
-        editItem.src = '/images/edit.png';
+        editItem.src = '/images/edit.PNG';
         editItem.addEventListener('click', handleDeleteOrCheckOrEdit);
         editItem.alt = 'editButton';
         editItem.style.cursor = 'pointer';
@@ -180,12 +180,12 @@ function checkTodo(e) {
     var todo = item.item;
     if(item.style.textDecoration == 'line-through') {
         item.style.textDecoration = 'none';
-        e.target.src = '../images/no-check-square.png';
+        e.target.src = '../images/no-check-square.PNG';
         updateStatus(shardToUpdate, "incomplete", date, todo);
     }
     else {
         item.style.textDecoration = 'line-through';
-        e.target.src = '../images/check-square.png';
+        e.target.src = '../images/check-square.PNG';
         updateStatus(shardToUpdate, "complete", date, todo);
     }
 }
