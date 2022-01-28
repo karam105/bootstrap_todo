@@ -30,8 +30,8 @@
 
     <div class="main">
       <div class="logo bg-white">
-        <h1>To-Do List</h1>
-        <button type="submit" class="btn btn-primary" onclick="backPageButton()" id="backPage">Back <i class="fas fa-backward"></i></button>
+        <h1 id="listHeader">To-Do List</h1>
+        <!-- <button type="submit" class="btn btn-primary" onclick="backPageButton()" id="backPage">Back <i class="fas fa-backward"></i></button> -->
         <button type="submit" class="btn btn-primary" onclick="signOutButton()" id="signOut">Sign Out <i class="fas fa-sign-out-alt"></i></button>
       </div>
       <form onsubmit="postToDo()" class="bg-white mb-5 p-3">
@@ -54,16 +54,34 @@
         <p id="nothingExists" class="bg-white"></p>
       </form>
 
-      <div class="bg-white">
-      <table id="dataTable" class="table table-striped table-bordered overflow-auto">
-        <thead class="bg-white">
-          <th class="mySortable" onclick="sortTable(0)" style="width: 50%;">Task Description</th>
-          <th class="mySortable" onclick="sortTable(1)" style="width: 25%;">Due Date</th>
-          <th style="width: 25%;">Status</th>
-        </thead>
-      </table>
+      <div class="bg-white tableDiv">
+        <table id="dataTable" class="table table-striped table-bordered">
+          <thead class="bg-white">
+            <th class="mySortable" onclick="sortTable(0)" style="width: 55%;">Task Description</th>
+            <th class="mySortable" onclick="sortTable(1)" style="width: 25%;">Due Date</th>
+            <th style="width: 20%;">Status</th>
+          </thead>
+        </table>
+      </div>
     </div>
+
+    <div id="id01" class="modal">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+      <form class="modal-content" action="/action_page.php">
+        <div class="modalContainer">
+          <h1>Delete ToDo Entry?</h1>
+          <p>Are you sure you want to delete?</p>
+        
+          <div class="clearfix">
+            <button type="button" id="cancelButton" class="cancelbtn">Cancel</button>
+            <button type="button" id="deleteButton" class="deletebtn">Delete</button>
+          </div>
+        </div>
+      </form>
     </div>
+
+    <!-- onclick="document.getElementById('id01').style.display='none'"
+onclick="document.getElementById('id01').style.display='none'" -->
       
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -18,6 +18,19 @@ var todoTableBody = document.createElement('tbody');
 todoTableBody.id = "tbodyID";
 dataTable.append(todoTableBody);
 
+var modal = document.getElementById('id01');
+var cancelModal = document.getElementById('cancelButton');
+var deleteModal = document.getElementById('deleteButton');
+
+var shardIDs = [];
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
 function getTodos() {
     const xhr = new XMLHttpRequest();
     xhr.open('GET', url + "/?user_email=" + userEmail);
@@ -45,6 +58,7 @@ function getTodos() {
 }
 
 function fetchAllToDos(index, shard_id, todo, status, dueDate) {
+    shardIDs.push(shard_id);
     var today = new Date();
     var date = new Date(dueDate);
 
@@ -209,9 +223,16 @@ function postToDo() {
 }
 
 function deleteTodo(e) {
-    var item = e.target.parentNode.parentNode;
-    todoTableBody.removeChild(item);
-    deleteFromTable(e);
+    document.getElementById('id01').style.display='block';
+    cancelModal.addEventListener('click', function() {
+        document.getElementById('id01').style.display = "none";
+    });
+    deleteModal.addEventListener('click', function() {
+        var item = e.target.parentNode.parentNode;
+        todoTableBody.removeChild(item);
+        deleteFromTable(e);
+        document.getElementById('id01').style.display = "none";
+    });
 }
 
 function deleteFromTable(e) {

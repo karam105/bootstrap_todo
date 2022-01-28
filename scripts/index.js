@@ -26,7 +26,7 @@ function signInButton() {
             var identityToken = result.getIdToken().getJwtToken();
             localStorage.setItem("loggedInUserEmail", parseJwt(identityToken).email);
             localStorage.setItem("loggedInUsername", parseJwt(identityToken).name);
-            location.href = './choice.html';
+            location.href = './app.html';
         },
 
         onFailure: function (err) {
