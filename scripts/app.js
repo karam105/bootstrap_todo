@@ -22,8 +22,6 @@ var modal = document.getElementById('id01');
 var cancelModal = document.getElementById('cancelButton');
 var deleteModal = document.getElementById('deleteButton');
 
-var shardIDs = [];
-
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
@@ -58,7 +56,6 @@ function getTodos() {
 }
 
 function fetchAllToDos(index, shard_id, todo, status, dueDate) {
-    shardIDs.push(shard_id);
     var today = new Date();
     var date = new Date(dueDate);
 
@@ -97,21 +94,21 @@ function fetchAllToDos(index, shard_id, todo, status, dueDate) {
 
         var complete = document.createElement('td');
         var checkMark = document.createElement('img');
-        checkMark.src = '/images/no-check-square.PNG';
+        checkMark.src = '../images/no-check-square.PNG';
         checkMark.addEventListener('click', handleDeleteOrCheckOrEdit);
         checkMark.alt = 'checkButton';
         checkMark.style.cursor = 'pointer';
         checkMark.title = 'Check Complete';
 
         var deleteItem = document.createElement('img');
-        deleteItem.src = '/images/delete.PNG';
+        deleteItem.src = '../images/delete.PNG';
         deleteItem.addEventListener('click', handleDeleteOrCheckOrEdit);
         deleteItem.alt = 'deleteButton';
         deleteItem.style.cursor = 'pointer';
         deleteItem.title = 'Delete Item';
 
         var editItem = document.createElement('img');
-        editItem.src = '/images/edit.PNG';
+        editItem.src = '../images/edit.PNG';
         editItem.addEventListener('click', handleDeleteOrCheckOrEdit);
         editItem.alt = 'editButton';
         editItem.style.cursor = 'pointer';
@@ -148,21 +145,21 @@ function fetchAllToDos(index, shard_id, todo, status, dueDate) {
 
         var complete = document.createElement('td');
         var checkMark = document.createElement('img');
-        checkMark.src = '/images/check-square.PNG';
+        checkMark.src = '../images/check-square.PNG';
         checkMark.addEventListener('click', handleDeleteOrCheckOrEdit);
         checkMark.alt = 'checkButton';
         checkMark.style.cursor = 'pointer';
         checkMark.title = 'Check Complete';
 
         var deleteItem = document.createElement('img');
-        deleteItem.src = '/images/delete.PNG';
+        deleteItem.src = '../images/delete.PNG';
         deleteItem.addEventListener('click', handleDeleteOrCheckOrEdit);
         deleteItem.alt = 'deleteButton';
         deleteItem.style.cursor = 'pointer';
         deleteItem.title = 'Delete Item';
 
         var editItem = document.createElement('img');
-        editItem.src = '/images/edit.PNG';
+        editItem.src = '../images/edit.PNG';
         editItem.addEventListener('click', handleDeleteOrCheckOrEdit);
         editItem.alt = 'editButton';
         editItem.style.cursor = 'pointer';
@@ -354,10 +351,6 @@ function signOutButton() {
     setTimeout(() => {
         location.href = './index.html';
     }, 1000);
-}
-
-function backPageButton() {
-    location.href = './choice.html';
 }
 
 function getUserAttributes(cognitoUser) {
